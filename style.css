@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+body {
+    background: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+}
+
+img {
+    align-self: flex-end;
+    margin-top: 2em;
+}
+
+.n {
+    color: #000000;
+    font-size: 25px;
+}
+
+h1.n  {
+    color: #000000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 4rem;
+    grid-template-areas:
+    ". flexcol ."
+    "flexrow flexcol flexrow1"
+    "flexrow flexco2 flexrow1"
+    ". flexco2 .";
+}
+
+.flexrow {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 -5px 0 0 rgba(0,255,255,0.75), 0 -3px 0 0 rgba(0,255,255,0.75);
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.flexrow1 {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 -5px 0 0 rgba(0,0,255,0.75), 0 -3px 0 0 rgba(0,0,255,0.75);
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.flexcol {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 -5px 0 0 rgba(234,83,83,0.75), 0 -3px 0 0 rgba(234,83,83,0.75);
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.flexco2 {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 -5px 0 0 rgba(252,175,74,0.75), 0 -3px 0 0 rgba(252,175,74,0.75);
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.attribution {
+    font-size: 15px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.flexcol {
+    grid-area: flexcol;
+}
+
+.flexco2 {
+    grid-area: flexco2;
+}
+
+.flexrow {
+    grid-area: flexrow;
+}
+
+.flexrow1 {
+    grid-area: flexrow1;
+}
+
+@media screen and (min-width: 375px) and (max-width: 999px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        grid-template-areas: 
+        "flexrow"
+        "flexcol"
+        "flexco2"
+        "flexrow1";
+    }
+
+    .flexcol {
+        grid-area: flexcol;
+    }
+    
+    .flexco2 {
+        grid-area: flexco2;
+    }
+    
+    .flexrow {
+        grid-area: flexrow;
+    }
+    
+    .flexrow1 {
+        grid-area: flexrow1;
+    }
+}
+
