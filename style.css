@@ -104,7 +104,7 @@ h1.n  {
     grid-area: flexrow1;
 }
 
-@media screen (max-width: 1000px) {
+@media (max-width: 1000px) {
     .container {
         display: grid;
         grid-template-columns: 1fr;
